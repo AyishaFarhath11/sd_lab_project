@@ -1,0 +1,106 @@
+/* src/styles/SetOperationsArticle.css */
+
+.set-operations-article {
+    font-family: Arial, sans-serif;
+    background-color: #faf3e0; /* Light beige background */
+    color: #3c2a21; /* Dark brown text */
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #2e1c14; /* Deep brown for the title */
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    color: #4b2e18; /* Slightly darker brown for section titles */
+    margin-top: 40px;
+    font-size: 1.8em;
+  }
+  
+  h3 {
+    color: #6a4e23; /* Medium brown for subheadings */
+    margin-top: 20px;
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #9e5b40; /* Warm brown links */
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #3c2a21; /* Dark brown on hover */
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  /* Section Backgrounds with varying brown shades */
+  .operation, .property {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f5e1c0; /* Soft beige for operation boxes */
+    border-left: 6px solid #7e5c44; /* Deep brown border */
+    border-radius: 8px;
+  }
+  
+  .operation h3, .property h3 {
+    font-size: 1.5em;
+    color: #7e5c44; /* Matching color for section headings */
+  }
+  
+  .operation p, .property p {
+    color: #3c2a21; /* Dark brown text */
+  }
+  
+  /* Links styling */
+  ul li a {
+    color: #9e5b40;
+    text-decoration: none;
+  }
+  
+  ul li a:hover {
+    color: #3c2a21;
+    text-decoration: underline;
+  }
+  
+  /* Table styling for examples */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #7e5c44; /* Border color to match the section */
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #d8b38d; /* Light brown for headers */
+  }
+  
+  td {
+    background-color: #f9f0e1; /* Lighter beige background for rows */
+  }
+  
+  /* Hover effect for table rows */
+  tr:hover {
+    background-color: #e8d0a9;
+  }
+  
