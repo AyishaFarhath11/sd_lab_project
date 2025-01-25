@@ -1,44 +1,51 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import ArticlePage from './ArticlePage';
-import React, { useState } from 'react';
-import concept from './images/conceptual.png';
-import videotutu from './images/videotutu.png'
-import practice from './images/practice.png'
-import startgame from './images/startgame.png'
+
 function App() {
- 
+  const games = [
+    {
+      id: 1,
+      title: 'Game 1',
+      description: 'An exciting adventure awaits!',
+      color: '#8B4513'
+    },
+    {
+      id: 2, 
+      title: 'Game 2',
+      description: 'Challenge your skills!',
+      color: '#D2691E'
+    },
+    {
+      id: 3,
+      title: 'Game 3', 
+      description: 'Explore new worlds!',
+      color: '#DEB887'
+    }
+  ];
 
   return (
-   
-    <div className="App">
-      <header className="header">
-        <h1>SET GAME</h1>
-      </header>
-      <div className="background">
-        <div className="section">
-          <h2>CONCEPTUAL EXPLANATION</h2>
-          <img src={concept} alt="Conceptual Explanation" />
-        </div>
-        <div className="section">
-          <h2>VIDEO TUTORIAL</h2>
-          <img src={videotutu} alt="Video Tutorial" />
-        </div>
-        <div className="section">
-          <h2>PRACTICE SESSION</h2>
-          <img src={practice} alt="Practice Session" />
-        </div>
-        <div className="section">
-          <h2>START GAME</h2>
-          <img src={startgame} alt="Actual Game" />
-        </div>
+    <div className="app-container">
+      <h1 className="page-title">SET GAME</h1>
+      <div className="game-grid">
+        {games.map((game) => (
+          <div 
+            key={game.id} 
+            className="game-card"
+            style={{ 
+              backgroundColor: game.color,
+              color: 'white'
+            }}
+          >
+            <div className="game-card-content">
+              <h2>{game.title}</h2>
+              <p>{game.description}</p>
+              <button className="play-button">Play Now</button>
+            </div>
+          </div>
+        ))}
       </div>
-    
-      </div> 
- 
+    </div>
   );
 }
 
-export default App;  
-
-
+export default App;

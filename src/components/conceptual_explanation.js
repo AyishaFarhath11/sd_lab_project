@@ -147,9 +147,27 @@ const SetOperationsArticle = () => {
           <li>Symmetric Difference - Elements in A or B, but not in the intersection.</li>
         </ul>
       </section>
-
-    
+      <div style={{
+        display: 'flex', 
+        justifyContent: 'center', 
+        marginTop: '20px'
+      }}>
+        <button 
+          style={{
+            padding: '15px 30px', // Increased padding
+            fontSize: '20px',      // Increased font size
+            backgroundColor: '#3c2a21',
+            color: 'white',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer'
+          }}
+        >
+          Try It Out
+        </button>
+      </div>
     </div>
+
   );
 };
 

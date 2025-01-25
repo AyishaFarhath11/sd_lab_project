@@ -12,6 +12,7 @@ const App = () => {
     { id: 'lavenderPurple', color: '#A97CFF' },
   ]);
   const [points, setPoints] = useState(0);
+  const [gameMessage, setGameMessage] = useState('');
 
   const handleDragStart = (e, item, source) => {
     e.dataTransfer.setData('item', JSON.stringify({ item, source }));
@@ -24,13 +25,13 @@ const App = () => {
     if (target === 'answerArea' && source === 'universalSet') {
       setUniversalSet((prev) => prev.filter((i) => i.id !== item.id));
       setAnswerArea((prev) => [...prev, item]);
-      setPoints(points + 1); // Increment points when an item is added to the answer area
     } else if (target === 'universalSet' && source === 'answerArea') {
       setAnswerArea((prev) => prev.filter((i) => i.id !== item.id));
       setUniversalSet((prev) => [...prev, item]);
-      setPoints(points > 0 ? points - 1 : 0); // Decrement points if moving back to the universal set
     }
   };
+
+ 
 
   const handleDragOver = (e) => {
     e.preventDefault();
@@ -38,9 +39,9 @@ const App = () => {
 
   return (
     <div className="app">
-      {/* Points Area */}
       <div className="points-area">
         <h4>Points: {points}</h4>
+        {gameMessage && <div className="game-message">{gameMessage}</div>}
       </div>
 
       <div className="sets">
@@ -62,7 +63,6 @@ const App = () => {
             <div className="circle" style={{ backgroundColor: '#007AFF' }}></div>
             <div className="circle" style={{ backgroundColor: '#A97CFF' }}></div>
             <div className="circle" style={{ backgroundColor: '#FFB6C1' }}></div>
-
           </div>
         </div>
 
@@ -96,7 +96,7 @@ const App = () => {
       </div>
 
       <div className="question-section">
-        <h2>Question:AΔB </h2>
+        <h2>AUB</h2>
       </div>
 
       <div className="answer-section">
@@ -117,7 +117,13 @@ const App = () => {
           ))}
         </div>
       </div>
-      <button className="submit-btn">Submit</button>
+      <button 
+        className="submit-btn" 
+
+        disabled={answerArea.length === 0}
+      >
+        Submit
+      </button>
     </div>
   );
 };
